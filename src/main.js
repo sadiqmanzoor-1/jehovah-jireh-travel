@@ -23,4 +23,7 @@ if (REDUCED) lenis.destroy();
 import { initUI } from './modules/ui.js';
 initUI(REDUCED ? null : lenis);
 
+import { initPreloader } from './modules/preloader.js';
+initPreloader();
+
 // Section inits appended here in later tasks.
