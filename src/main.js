@@ -20,4 +20,7 @@ gsap.ticker.add((time) => lenis.raf(time * 1000));
 gsap.ticker.lagSmoothing(0);
 if (REDUCED) lenis.destroy();
 
+import { initUI } from './modules/ui.js';
+initUI(REDUCED ? null : lenis);
+
 // Section inits appended here in later tasks.
