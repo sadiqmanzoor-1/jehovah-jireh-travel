@@ -35,4 +35,7 @@ initManifesto();
 import { initDestinations } from './modules/destinations.js';
 initDestinations(REDUCED ? null : lenis);
 
+import { initJourneys } from './modules/journeys.js';
+initJourneys();
+
 // Section inits appended here in later tasks.
