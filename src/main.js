@@ -38,4 +38,8 @@ initDestinations(REDUCED ? null : lenis);
 import { initJourneys } from './modules/journeys.js';
 initJourneys();
 
-// Section inits appended here in later tasks.
+import { initInterlude } from './modules/interlude.js';
+initInterlude();
+
+import { initStories } from './modules/stories.js';
+initStories();
