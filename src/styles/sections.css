@@ -21,7 +21,7 @@
 /* ---------- manifesto ---------- */
 .manifesto { position: relative; min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20vh 6vw; overflow: hidden; }
 .manifesto__mist { position: absolute; inset: -20% -10%; background: radial-gradient(ellipse at 30% 40%, rgba(230,235,230,0.06), transparent 55%), radial-gradient(ellipse at 75% 65%, rgba(230,235,230,0.05), transparent 55%); }
-.manifesto__line { font-family: var(--font-display); font-weight: 600; font-size: clamp(2.2rem, 6vw, 5rem); line-height: 1.2; position: relative; }
+.manifesto__line { font-family: var(--font-display); font-weight: 500; font-size: clamp(2.2rem, 6vw, 5rem); line-height: 1.2; position: relative; }
 .manifesto__line .w { display: inline-block; }
 .manifesto__line--accent { font-style: italic; color: var(--c-gold); }
 .manifesto__divider { width: 90px; height: 1px; margin-top: 40px; background: linear-gradient(90deg, transparent, var(--c-gold), transparent); transform: scaleX(0); }
@@ -110,7 +110,7 @@
 /* ---------- footer ---------- */
 .footer { position: relative; padding: 12vh 6vw 40px; overflow: hidden; text-align: center; }
 .footer__rule { height: 1px; background: linear-gradient(90deg, transparent, var(--c-gold), transparent); transform: scaleX(0); margin-bottom: 10vh; }
-.footer__word { font-family: var(--font-display); font-weight: 600; font-size: clamp(3.4rem, 11vw, 11rem); line-height: 1; white-space: nowrap; }
+.footer__word { font-family: var(--font-display); font-weight: 500; font-size: clamp(3.4rem, 11vw, 11rem); line-height: 1; white-space: nowrap; }
 .footer__tag { margin-top: 10px; font-style: italic; font-size: 1.3rem; }
 .footer__cols { display: flex; justify-content: center; gap: 8vw; margin-top: 8vh; text-align: left; flex-wrap: wrap; }
 .footer__cols p:not(.label) { margin-top: 10px; font-size: 1rem; color: rgba(240,234,214,0.75); }
