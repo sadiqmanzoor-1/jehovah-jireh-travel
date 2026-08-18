@@ -43,3 +43,9 @@ initInterlude();
 
 import { initStories } from './modules/stories.js';
 initStories();
+
+import { initContact } from './modules/contact.js';
+initContact();
+
+import { initFooter } from './modules/footer.js';
+initFooter();
