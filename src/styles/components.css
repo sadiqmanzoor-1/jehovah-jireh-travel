@@ -40,3 +40,8 @@
 .field__hint { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.1em; color: #ff7a5c; opacity: 0; transition: opacity 0.3s; min-height: 1em; }
 .field.is-error input, .field.is-error textarea { border-bottom-color: #ff7a5c; }
 .field.is-error .field__hint { opacity: 1; }
+/* ---------- mobile polish (≤767px) ---------- */
+@media (max-width: 767px) {
+  .marker { display: none; }
+  .nav__brand { letter-spacing: 0.22em; }
+}

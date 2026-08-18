@@ -1,5 +1,5 @@
 /* ---------- hero ---------- */
-.hero { position: relative; height: 100vh; overflow: hidden; }
+.hero { position: relative; height: 100vh; height: 100svh; overflow: hidden; }
 .hero__media, .hero__video { position: absolute; inset: 0; width: 100%; height: 100%; }
 .hero__video { object-fit: cover; opacity: 0; }
 .hero__video.is-active { opacity: 1; }
@@ -19,7 +19,7 @@
 .hero__log-item.is-active { opacity: 1; }
 .hero__scroll { position: absolute; left: 26px; bottom: 8vh; z-index: 2; font-size: 0.6rem; letter-spacing: 0.3em; color: rgba(240,234,214,0.5); }
 /* ---------- manifesto ---------- */
-.manifesto { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20vh 6vw; overflow: hidden; }
+.manifesto { position: relative; min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20vh 6vw; overflow: hidden; }
 .manifesto__mist { position: absolute; inset: -20% -10%; background: radial-gradient(ellipse at 30% 40%, rgba(230,235,230,0.06), transparent 55%), radial-gradient(ellipse at 75% 65%, rgba(230,235,230,0.05), transparent 55%); }
 .manifesto__line { font-size: clamp(2.2rem, 6vw, 5rem); line-height: 1.2; position: relative; }
 .manifesto__line .w { display: inline-block; }
@@ -30,7 +30,7 @@
 .dest { position: relative; overflow: hidden; }
 .dest__head { position: absolute; top: 7vh; left: 6vw; z-index: 5; }
 .dest__head h2 { font-size: clamp(1.6rem, 3vw, 2.6rem); margin-top: 10px; }
-.dest__viewport { height: 100vh; overflow: hidden; }
+.dest__viewport { height: 100vh; height: 100svh; overflow: hidden; }
 .dest__track { display: flex; height: 100%; }
 .dest__panel { position: relative; flex: 0 0 100vw; height: 100%; overflow: hidden; }
 .dest__panel img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.85) brightness(0.75); }
@@ -55,7 +55,7 @@
 .journeys { padding: 18vh 6vw; }
 .journeys h2 { font-size: clamp(1.8rem, 3.4vw, 3rem); margin: 12px 0 60px; }
 .journeys__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
-@media (max-width: 1023px) { .journeys__grid { grid-template-columns: 1fr; max-width: 560px; } }
+@media (max-width: 1023px) { .journeys__grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; } }
 .jcard { position: relative; background: rgba(30,58,47,0.25); border: 1px solid rgba(240,234,214,0.12); padding: 34px 28px; transform-style: preserve-3d; transition: border-color 0.35s; will-change: transform; }
 .jcard:hover { border-color: rgba(212,175,55,0.7); }
 .jcard--flagship { border-color: rgba(212,175,55,0.5); }
@@ -93,7 +93,7 @@
 .stories__dot::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: rgba(240,234,214,0.25); transition: background-color 0.3s, transform 0.3s; }
 .stories__dot.is-active::before { background: var(--c-gold); transform: scale(1.3); }
 /* ---------- contact ---------- */
-.contact { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 16vh 6vw; overflow: hidden; }
+.contact { position: relative; min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 16vh 6vw; overflow: hidden; }
 .contact__mist { position: absolute; inset: -20%; background: radial-gradient(ellipse at 50% 100%, rgba(212,175,55,0.07), transparent 55%), radial-gradient(ellipse at 20% 20%, rgba(230,235,230,0.05), transparent 50%); }
 .contact h2 { font-size: clamp(2.4rem, 6vw, 5rem); text-align: center; }
 .contact__form { position: relative; z-index: 2; margin-top: 60px; width: min(760px, 100%); display: grid; grid-template-columns: 1fr 1fr; gap: 34px 40px; }
@@ -116,3 +116,61 @@
 .footer__cols p:not(.label) { margin-top: 10px; font-size: 1rem; color: rgba(240,234,214,0.75); }
 .footer__cols a { border-bottom: 1px solid rgba(212,175,55,0.5); }
 .footer__credits { margin-top: 9vh; font-size: 0.58rem; letter-spacing: 0.2em; color: rgba(240,234,214,0.55); }
+/* ---------- mobile polish (≤767px) ---------- */
+@media (max-width: 767px) {
+  /* hero: calmer chrome, nothing colliding */
+  .hero__bar { height: 3vh; }
+  .hero__title { bottom: 24vh; padding: 0 18px; }
+  .hero__title h1 { font-size: clamp(2rem, 9.5vw, 3rem); }
+  .hero__caps { height: 1.6em; margin-top: 14px; }
+  .hero__cap { font-size: 0.56rem; letter-spacing: 0.18em; padding: 0 14px; }
+  .hero__ticks { bottom: 16vh; }
+  .hero__log { display: none; }
+  .hero__scroll { left: 0; right: 0; text-align: center; bottom: 7vh; }
+
+  /* manifesto */
+  .manifesto { padding: 14vh 7vw; }
+  .manifesto__line { font-size: clamp(1.9rem, 9vw, 2.6rem); }
+  .manifesto__divider { margin-top: 30px; }
+  .manifesto__coords { right: 0; left: 0; text-align: center; }
+
+  /* destinations: header in normal flow, panels as swipe cards */
+  .dest__head { position: static; padding: 11vh 7vw 24px; }
+  .dest__head h2 { font-size: 1.7rem; }
+  .dest__viewport { height: 68vh; height: 68svh; padding: 0 7vw 6vh; scroll-padding: 0 7vw; }
+  .dest__track { gap: 14px; }
+  .dest__panel { flex: 0 0 82vw; border-radius: 10px; scroll-snap-align: center; }
+  .dest__panel::after { border-radius: 10px; }
+  .dest__info { left: 8vw; right: 8vw; bottom: 6vh; }
+  .dest__name { font-size: clamp(2.2rem, 11vw, 3rem); }
+  .dest__line { font-size: 1.1rem; }
+
+  /* journeys */
+  .journeys { padding: 11vh 7vw 13vh; }
+  .journeys h2 { margin: 10px 0 34px; }
+  .jcard { padding: 26px 22px; }
+  .jcard h3 { font-size: 1.6rem; }
+
+  /* interlude */
+  .interlude { height: 56vh; height: 56svh; }
+  .interlude__quote { font-size: clamp(1.35rem, 6.4vw, 1.8rem); padding: 0 9vw; }
+
+  /* stories */
+  .stories { padding: 12vh 7vw; min-height: 84vh; min-height: 84svh; }
+  .stories__stage { min-height: 320px; }
+  .story blockquote { font-size: clamp(1.3rem, 6.6vw, 1.7rem); }
+  .stories__dots { margin-top: 28px; }
+
+  /* contact */
+  .contact { padding: 13vh 7vw; }
+  .contact h2 { font-size: clamp(2rem, 10vw, 2.8rem); }
+  .contact__form { margin-top: 44px; gap: 28px; }
+  .contact__submit { justify-self: stretch; width: 100%; padding: 16px 20px; }
+
+  /* footer */
+  .footer { padding: 10vh 6vw 30px; }
+  .footer__rule { margin-bottom: 7vh; }
+  .footer__word { font-size: 13vw; }
+  .footer__cols { flex-direction: column; gap: 30px; margin-top: 6vh; text-align: center; align-items: center; }
+  .footer__credits { margin-top: 6vh; letter-spacing: 0.14em; line-height: 1.9; }
+}
