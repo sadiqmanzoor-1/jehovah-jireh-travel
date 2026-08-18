@@ -33,7 +33,7 @@
 /* ---------- form fields ---------- */
 .field { position: relative; display: flex; flex-direction: column; gap: 8px; }
 .field label { font-size: 0.65rem; letter-spacing: 0.3em; color: var(--c-gold); }
-.field input, .field textarea { background: transparent; border: 0; border-bottom: 1px solid rgba(240,234,214,0.25); color: var(--c-ivory); font-family: var(--font-serif); font-size: 1.15rem; padding: 6px 2px; border-radius: 0; }
+.field input, .field textarea { background: transparent; border: 0; border-bottom: 1px solid rgba(240,234,214,0.25); color: var(--c-ivory); font-family: var(--font-body); font-size: 1.1rem; padding: 6px 2px; border-radius: 0; }
 .field input:focus, .field textarea:focus { outline: none; }
 .field::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--c-gold); transform: scaleX(0); transform-origin: left; transition: transform 0.5s var(--ease-out); }
 .field:focus-within::after { transform: scaleX(1); }

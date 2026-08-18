@@ -9,7 +9,7 @@
 .hero__title { position: absolute; left: 0; right: 0; bottom: 22vh; text-align: center; z-index: 2; }
 .hero__title h1 { font-size: clamp(3rem, 8vw, 7rem); }
 .hero__caps { position: relative; height: 1.2em; margin-top: 18px; }
-.hero__cap { position: absolute; left: 0; right: 0; font-size: 0.7rem; letter-spacing: 0.4em; color: rgba(240,234,214,0.75); opacity: 0; }
+.hero__cap { position: absolute; left: 0; right: 0; font-family: var(--font-display); font-weight: 600; font-size: 0.66rem; letter-spacing: 0.35em; color: rgba(240,234,214,0.75); opacity: 0; }
 .hero__cap.is-active { opacity: 1; }
 .hero__ticks { position: absolute; left: 0; right: 0; bottom: 13vh; display: flex; justify-content: center; gap: 8px; z-index: 2; }
 .hero__tick { width: 28px; height: 2px; background: rgba(240,234,214,0.25); overflow: hidden; }
@@ -21,7 +21,7 @@
 /* ---------- manifesto ---------- */
 .manifesto { position: relative; min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20vh 6vw; overflow: hidden; }
 .manifesto__mist { position: absolute; inset: -20% -10%; background: radial-gradient(ellipse at 30% 40%, rgba(230,235,230,0.06), transparent 55%), radial-gradient(ellipse at 75% 65%, rgba(230,235,230,0.05), transparent 55%); }
-.manifesto__line { font-size: clamp(2.2rem, 6vw, 5rem); line-height: 1.2; position: relative; }
+.manifesto__line { font-family: var(--font-display); font-weight: 600; font-size: clamp(2.2rem, 6vw, 5rem); line-height: 1.2; position: relative; }
 .manifesto__line .w { display: inline-block; }
 .manifesto__line--accent { font-style: italic; color: var(--c-gold); }
 .manifesto__divider { width: 90px; height: 1px; margin-top: 40px; background: linear-gradient(90deg, transparent, var(--c-gold), transparent); transform: scaleX(0); }
@@ -110,7 +110,7 @@
 /* ---------- footer ---------- */
 .footer { position: relative; padding: 12vh 6vw 40px; overflow: hidden; text-align: center; }
 .footer__rule { height: 1px; background: linear-gradient(90deg, transparent, var(--c-gold), transparent); transform: scaleX(0); margin-bottom: 10vh; }
-.footer__word { font-size: clamp(3.4rem, 11vw, 11rem); line-height: 1; white-space: nowrap; }
+.footer__word { font-family: var(--font-display); font-weight: 600; font-size: clamp(3.4rem, 11vw, 11rem); line-height: 1; white-space: nowrap; }
 .footer__tag { margin-top: 10px; font-style: italic; font-size: 1.3rem; }
 .footer__cols { display: flex; justify-content: center; gap: 8vw; margin-top: 8vh; text-align: left; flex-wrap: wrap; }
 .footer__cols p:not(.label) { margin-top: 10px; font-size: 1rem; color: rgba(240,234,214,0.75); }
@@ -121,7 +121,7 @@
   /* hero: calmer chrome, nothing colliding */
   .hero__bar { height: 3vh; }
   .hero__title { bottom: 24vh; padding: 0 18px; }
-  .hero__title h1 { font-size: clamp(2rem, 9.5vw, 3rem); }
+  .hero__title h1 { font-size: clamp(1.7rem, 8.2vw, 2.6rem); }
   .hero__caps { height: 1.6em; margin-top: 14px; }
   .hero__cap { font-size: 0.56rem; letter-spacing: 0.18em; padding: 0 14px; }
   .hero__ticks { bottom: 16vh; }
