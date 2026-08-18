@@ -5,6 +5,8 @@ import '@fontsource/cormorant-garamond/600.css';
 import '@fontsource/ibm-plex-mono/400.css';
 import '@fontsource/ibm-plex-mono/500.css';
 import './styles/base.css';
+import './styles/components.css';
+import './styles/sections.css';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
