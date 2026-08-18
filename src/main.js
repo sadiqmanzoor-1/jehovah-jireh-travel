@@ -29,4 +29,7 @@ initPreloader();
 import { initHero } from './modules/hero.js';
 initHero();
 
+import { initManifesto } from './modules/manifesto.js';
+initManifesto();
+
 // Section inits appended here in later tasks.
