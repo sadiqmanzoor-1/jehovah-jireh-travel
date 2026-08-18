@@ -26,4 +26,7 @@ initUI(REDUCED ? null : lenis);
 import { initPreloader } from './modules/preloader.js';
 initPreloader();
 
+import { initHero } from './modules/hero.js';
+initHero();
+
 // Section inits appended here in later tasks.
