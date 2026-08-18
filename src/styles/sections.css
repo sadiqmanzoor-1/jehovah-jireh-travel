@@ -34,6 +34,7 @@
 .dest__track { display: flex; height: 100%; }
 .dest__panel { position: relative; flex: 0 0 100vw; height: 100%; overflow: hidden; }
 .dest__panel img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.85) brightness(0.75); }
+.dest__panel img { -webkit-user-drag: none; user-select: none; }
 .dest__panel::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(4,8,6,0.35), transparent 40%, rgba(4,8,6,0.8)); }
 .dest__info { position: absolute; left: 6vw; bottom: 10vh; z-index: 2; }
 .dest__index { font-size: 0.65rem; letter-spacing: 0.3em; color: var(--c-gold); }

@@ -49,7 +49,9 @@ export function initUI(lenis) {
   // --- smooth anchors
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener('click', (e) => {
-      const el = document.querySelector(a.getAttribute('href'));
+      const href = a.getAttribute('href');
+      if (href.length < 2) { e.preventDefault(); return; }
+      const el = document.querySelector(href);
       if (!el) return;
       e.preventDefault();
       if (lenis && !REDUCED) lenis.scrollTo(el, { offset: 0 });

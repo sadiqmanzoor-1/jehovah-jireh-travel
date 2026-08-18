@@ -37,6 +37,6 @@
 .field input:focus, .field textarea:focus { outline: none; }
 .field::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--c-gold); transform: scaleX(0); transform-origin: left; transition: transform 0.5s var(--ease-out); }
 .field:focus-within::after { transform: scaleX(1); }
-.field__hint { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.1em; color: #c0392b; opacity: 0; transition: opacity 0.3s; min-height: 1em; }
-.field.is-error input, .field.is-error textarea { border-bottom-color: #c0392b; }
+.field__hint { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.1em; color: #ff7a5c; opacity: 0; transition: opacity 0.3s; min-height: 1em; }
+.field.is-error input, .field.is-error textarea { border-bottom-color: #ff7a5c; }
 .field.is-error .field__hint { opacity: 1; }
