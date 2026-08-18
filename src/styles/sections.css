@@ -25,7 +25,7 @@
 .manifesto__line .w { display: inline-block; }
 .manifesto__line--accent { font-style: italic; color: var(--c-gold); }
 .manifesto__divider { width: 90px; height: 1px; margin-top: 40px; background: linear-gradient(90deg, transparent, var(--c-gold), transparent); transform: scaleX(0); }
-.manifesto__coords { position: absolute; right: 26px; bottom: 26px; font-size: 0.6rem; letter-spacing: 0.2em; color: rgba(240,234,214,0.35); }
+.manifesto__coords { position: absolute; right: 26px; bottom: 26px; font-size: 0.6rem; letter-spacing: 0.2em; color: rgba(240,234,214,0.55); }
 /* ---------- destinations ---------- */
 .dest { position: relative; overflow: hidden; }
 .dest__head { position: absolute; top: 7vh; left: 6vw; z-index: 5; }
@@ -40,6 +40,12 @@
 .dest__name { font-size: clamp(3rem, 7vw, 6.5rem); line-height: 1; }
 .dest__alt { margin-top: 8px; font-size: 0.65rem; letter-spacing: 0.25em; color: rgba(240,234,214,0.6); }
 .dest__line { margin-top: 6px; font-size: 1.3rem; font-style: italic; color: rgba(240,234,214,0.85); }
+@media (prefers-reduced-motion: reduce) {
+  /* desktop pin is skipped in JS under reduced motion — fall back to a native
+     scroll-snap strip so panels 2–5 stay reachable without the GSAP pin. */
+  .dest__viewport { overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+  .dest__panel { scroll-snap-align: start; }
+}
 @media (max-width: 767px) {
   .dest__viewport { overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
   .dest__panel { flex: 0 0 86vw; scroll-snap-align: center; }
@@ -82,8 +88,9 @@
 .story blockquote { font-size: clamp(1.5rem, 3.4vw, 2.6rem); font-style: italic; line-height: 1.3; }
 .story figcaption { font-size: 0.62rem; letter-spacing: 0.25em; color: rgba(240,234,214,0.55); }
 .stories__dots { display: flex; gap: 12px; margin-top: 46px; z-index: 2; }
-.stories__dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(240,234,214,0.25); transition: background-color 0.3s, transform 0.3s; }
-.stories__dot.is-active { background: var(--c-gold); transform: scale(1.3); }
+.stories__dot { position: relative; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; }
+.stories__dot::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: rgba(240,234,214,0.25); transition: background-color 0.3s, transform 0.3s; }
+.stories__dot.is-active::before { background: var(--c-gold); transform: scale(1.3); }
 /* ---------- contact ---------- */
 .contact { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 16vh 6vw; overflow: hidden; }
 .contact__mist { position: absolute; inset: -20%; background: radial-gradient(ellipse at 50% 100%, rgba(212,175,55,0.07), transparent 55%), radial-gradient(ellipse at 20% 20%, rgba(230,235,230,0.05), transparent 50%); }
@@ -107,4 +114,4 @@
 .footer__cols { display: flex; justify-content: center; gap: 8vw; margin-top: 8vh; text-align: left; flex-wrap: wrap; }
 .footer__cols p:not(.label) { margin-top: 10px; font-size: 1rem; color: rgba(240,234,214,0.75); }
 .footer__cols a { border-bottom: 1px solid rgba(212,175,55,0.5); }
-.footer__credits { margin-top: 9vh; font-size: 0.58rem; letter-spacing: 0.2em; color: rgba(240,234,214,0.4); }
+.footer__credits { margin-top: 9vh; font-size: 0.58rem; letter-spacing: 0.2em; color: rgba(240,234,214,0.55); }

@@ -49,3 +49,7 @@ initContact();
 
 import { initFooter } from './modules/footer.js';
 initFooter();
+
+// re-measure pin/scroll distances once all images/video posters have loaded and
+// settled layout, so ScrollTrigger start/end + pin-spacing stay accurate.
+window.addEventListener('load', () => ScrollTrigger.refresh());

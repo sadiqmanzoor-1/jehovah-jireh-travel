@@ -18,7 +18,7 @@
 @media (prefers-reduced-motion: reduce) { .grain { animation: none; } }
 /* ---------- progress + marker ---------- */
 .progress { position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 85; background: var(--c-gold); transform: scaleX(0); transform-origin: left; }
-.marker { position: fixed; left: 22px; bottom: 20px; z-index: 85; font-size: 0.7rem; letter-spacing: 0.3em; color: rgba(240,234,214,0.45); }
+.marker { position: fixed; left: 22px; bottom: 20px; z-index: 85; font-size: 0.7rem; letter-spacing: 0.3em; color: rgba(240,234,214,0.55); }
 /* ---------- nav ---------- */
 .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 86; display: flex; justify-content: space-between; align-items: center; padding: 22px 32px; transition: transform 0.45s var(--ease-out), background-color 0.35s, backdrop-filter 0.35s; }
 .nav--hidden { transform: translateY(-110%); }
