@@ -4,3 +4,4 @@ dist/
 .DS_Store
 assets-raw/
 chat-history/
+.claude/settings.local.json
